@@ -1,9 +1,23 @@
 nav {
+  display: flex;
+  justify-content: space-between;
   height: 120px;
   padding-right: 1.5em;
   padding-left: 1.5em;
   width: 100vw;
-  background-color: #4056A1;
-  color: #FFFFFF;
-  font-family: 'Bungee', cursive;
+  background-color: #4056a1;
+  color: #ffffff;
+}
+
+nav span {
+  font-family: "Bungee", cursive;
+}
+
+.subheader span {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+div.tweeter {
+  padding-top: 60px;
+  font-size: 32px;
 }
