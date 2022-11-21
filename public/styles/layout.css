@@ -25,11 +25,10 @@ body {
 main.container {
   width: 90vw;
   margin: auto;
-  background-color: #545149;
+  background-color: #f4f1ec;
   color: antiquewhite;
   display: flex;
-  align-items: center;
-  
+  flex-direction: column-reverse;
 }
 
 /*
