@@ -7,6 +7,7 @@ nav {
   width: 100vw;
   background-color: #4056a1;
   color: #ffffff;
+  position: fixed;
 }
 
 nav span {

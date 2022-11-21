@@ -1,0 +1,24 @@
+header {
+  height: 400px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding-top: 235px;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body {
+  background-color: #323e8a;
+  background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
+}
+
+div.name h2 {
+  color: antiquewhite;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
