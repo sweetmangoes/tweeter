@@ -4,6 +4,9 @@ header {
   display: flex;
   justify-content: center;
   padding-top: 235px;
+  padding-bottom: 255px;
+  background-color: #323e8a;
+  background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
 }
 
 div {
@@ -12,13 +15,12 @@ div {
   justify-content: center;
 }
 
-body {
-  background-color: #323e8a;
-  background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
+div.photo {
+  padding-top: 175px;
 }
 
 div.name h2 {
-  color: antiquewhite;
+  color: white;
   font-family: 'Source Sans Pro', sans-serif;
 }
 

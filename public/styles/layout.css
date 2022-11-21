@@ -22,6 +22,16 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+main.container {
+  width: 90vw;
+  margin: auto;
+  background-color: #545149;
+  color: antiquewhite;
+  display: flex;
+  align-items: center;
+  
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
