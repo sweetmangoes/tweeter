@@ -13,11 +13,22 @@ nav span {
   font-family: "Bungee", cursive;
 }
 
+div.sub {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 45px;
+}
+
 .subheader span {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
 div.tweeter {
   padding-top: 60px;
-  font-size: 32px;
+  font-size: 38px;
+}
+
+div.icon {
+  color:red;
 }
