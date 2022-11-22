@@ -1,4 +1,9 @@
+// Utilizing jquery
+const { JSDOM } = require( "jsdom" );
+const { window } = new JSDOM( "" );
+const $ = require( "jquery" )( window );
+
+
 $(document).ready(function() {
-  console.log(`it's work!`)
   // --- our code goes here ---
 });
