@@ -73,28 +73,71 @@
       </header>
       
 
-    <!-- Page-specific (main) content here -->
+    <!-- Main Container-->
     <main class="container">
       <section class="new-tweet">
         <form>
-
+          
+          <!-- New-Tweet-->
           <div>
             <label for="tweet-text">What are you humming about?</label>
             <textarea name="text" id="tweet-text"></textarea>
           </div>
-
-
           <div class="button-counter">
-
             <div>
               <button type="submit">Tweet</button>
             </div>
-
             <div>
               <output name="counter" class="counter" for="tweet-text" id="count-char">140</output>
             </div>
-
           </div>
+
+          <!-- Tweet Container-->
+          <article class="tweet-container">
+            
+            <article class="avatar-name-handle">
+              <section class="avatar-name">
+                <div>
+                  <i class="fa-solid fa-user-astronaut"></i>
+                </div>
+                <div>
+                  <h4>Astro</h4>
+                </div>
+                <div class="user-handle">
+                  <h4>@Moonwalker</h4>
+                </div>
+              </section>
+            
+            <article class="tweet">
+              <p> Can't wait to go back to the moon! Launching into space in 2 days.</p>
+            </article>
+
+            <article class="date-icons">
+              <div>
+                <p> 10 days ago </p>
+              </div>
+
+              <div class="icon-flag-retweet-like">
+                <div>
+                  <i class="fa-solid fa-flag"></i>
+                </div>
+                <div>
+                  <i class="fa-solid fa-retweet"></i>
+                </div>
+                <div>
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+            </article>
+            
+            
+            
+
+
+
+
+          </article>
+
 
         </form>
       </section>
