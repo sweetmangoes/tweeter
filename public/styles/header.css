@@ -16,11 +16,13 @@ div {
 }
 
 div.photo {
-  padding-top: 175px;
+  margin-top: 120px;
 }
 
 div.name h2 {
   color: white;
   font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 8px;
+  margin-bottom: 0;
 }
 
