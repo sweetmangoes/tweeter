@@ -1,3 +1,8 @@
+article.tweet-container {
+  border: 3px solid #545149;
+
+}
+
 header.avatar-name-handle {
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
@@ -16,7 +21,7 @@ div.pic-name p {
 }
 
 div.user-handle {
-  color: #4056a1;
+  color: #4057a16f;
   font-weight: bolder;
 }
 
@@ -35,3 +40,6 @@ div.icon-flag-retweet-like {
 div.date{
   font-size: smaller;
 }
+/*
+border: 2px solid black
+*/
