@@ -1,0 +1,37 @@
+header.avatar-name-handle {
+  font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.pic-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+div.pic-name p {
+  padding-left: 15px;
+}
+
+div.user-handle {
+  color: #4056a1;
+  font-weight: bolder;
+}
+
+footer.date-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.icon-flag-retweet-like {
+  display: flex;
+  flex-direction: row;
+  color: #4056a1;
+}
+
+div.date{
+  font-size: smaller;
+}
