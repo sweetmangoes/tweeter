@@ -1,6 +1,6 @@
 article.tweet-container {
   border: 3px solid #545149;
-
+  padding: 20px;
 }
 
 header.avatar-name-handle {
@@ -25,6 +25,13 @@ div.user-handle {
   font-weight: bolder;
 }
 
+article.tweet {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0; 
+  border-bottom: .25rem solid grey;
+}
+
 footer.date-icons {
   display: flex;
   justify-content: space-between;
@@ -40,6 +47,3 @@ div.icon-flag-retweet-like {
 div.date{
   font-size: smaller;
 }
-/*
-border: 2px solid black
-*/
