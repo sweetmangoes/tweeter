@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  console.log(`Jquery hover active!`);
   $("#tweet-container").hover(
     function () {
       $(this).css("box-shadow", "15px 15px  #4057a16f");

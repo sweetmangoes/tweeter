@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  console.log(`Jquery typing active!`);
   $("#tweet-text").keyup(function (event) {
     console.log(`typing works!`);
     let charCount = $(this).val().length;
