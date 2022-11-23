@@ -8,12 +8,15 @@ header.avatar-name-handle {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 div.pic-name {
   display: flex;
   flex-direction: row;
   align-items: center;
+
 }
 
 div.pic-name p {
@@ -23,6 +26,7 @@ div.pic-name p {
 div.user-handle {
   color: #4057a16f;
   font-weight: bolder;
+
 }
 
 article.tweet {
@@ -32,10 +36,22 @@ article.tweet {
   border-bottom: .25rem solid grey;
 }
 
+article.tweet p {
+  padding-left: 20px;
+  font-weight: bold;
+}
+
 footer.date-icons {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+div.date{
+  font-size: smaller;
+
 }
 
 div.icon-flag-retweet-like {
@@ -44,6 +60,13 @@ div.icon-flag-retweet-like {
   color: #4056a1;
 }
 
-div.date{
-  font-size: smaller;
+div.icon-flag {
+  padding-right: 15px;
 }
+
+div.icon-retweet {
+  padding-right: 15px;
+}
+  
+
+

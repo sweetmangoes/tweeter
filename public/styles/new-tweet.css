@@ -39,3 +39,7 @@ div button {
   color: white;
   display: flex;
 }
+
+div label {
+  font-weight: bold;
+}
