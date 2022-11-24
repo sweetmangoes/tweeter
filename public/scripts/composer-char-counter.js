@@ -1,6 +1,5 @@
 $(document).ready(function () {
   $("#tweet-text").keyup(function (event) {
-    console.log(`typing works!`);
     let charCount = $(this).val().length;
     let countCharElement = $("#count-char");
     countCharElement.text(140 - charCount);
