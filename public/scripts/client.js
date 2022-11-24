@@ -35,7 +35,7 @@ $(document).ready(function () {
       // calls createTweetElement for each tweet
       let $tweet = createTweetElement(element);
       // takes return value and appends it to the tweets container
-      $("#tweet-container").append($tweet);
+      $("#tweet-timeline").append($tweet);
     }
   };
 
@@ -76,6 +76,7 @@ containing the entire HTML structure of the tweet.
         </div>
       </footer>
     </article>
+  <br>
 `;
     return $tweet;
   };
