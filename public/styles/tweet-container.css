@@ -3,6 +3,10 @@ article.tweet-container {
   padding: 20px;
 }
 
+article.tweet-container:hover {
+  box-shadow: 15px 15px  #4057a16f;
+}
+
 header.avatar-name-handle {
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
@@ -67,6 +71,16 @@ div.icon-flag {
 div.icon-retweet {
   padding-right: 15px;
 }
-  
 
+div.icon-flag:hover {
+  color:gold;
+}
+
+div.icon-retweet:hover {
+  color:gold;
+}
+
+div.icon-like:hover {
+  color:gold;
+}
 
