@@ -99,11 +99,15 @@
         </form>
 
         <script>
-          console.log(`before doc`)
           $(document).ready(function () {
-            console.log(`after doc`)
             $("form").submit(function(event){
               event.preventDefault();
+              console.log($(this).serialize())
+              let data = $(this).serialize()
+              $.post('http://localhost:8080/', data, function(response, textStatus){
+                console.log(response);
+                console.log(textStatus); 
+              } )
             })
           })
         </script>
