@@ -32,6 +32,11 @@ $(document).ready(function () {
   */
 
   createTweetElement = (tweetObj) => {
+    /*
+    Created a variable to use timeago.format 
+    */
+    let timeFormat = timeago.format(tweetObj.created_at);
+
     let $tweet = `
     <article class="tweet-container" id="tweet-container">
       <header class="avatar-name-handle">
@@ -48,7 +53,7 @@ $(document).ready(function () {
       </article>
       <footer class="date-icons">
         <div class="date">
-        <p>${tweetObj.created_at}</p>
+        <p>${timeFormat}</p>
         </div>
         <div class="icon-flag-retweet-like">
           <div class="icon-flag" id="icon-flag">
