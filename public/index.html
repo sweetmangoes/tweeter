@@ -36,7 +36,7 @@
     <!-- New-Tweet CSS -->
     <link rel="stylesheet" href="./styles/new-tweet.css" type="text/css" />
 
-    <!-- Tweet-Container CSS -->
+    <!-- Tweet-Timeline (i.e. Tweet-Container) CSS -->
     <link rel="stylesheet" href="./styles/tweet-container.css" type="text/css" />
 
     <!-- Script for char count of New-Tweet -->
@@ -82,21 +82,33 @@
     <!-- Main Container-->
     <main class="container">
       <section class="new-tweet">
+        <!-- New-Tweet-->
         <form>       
-          <!-- New-Tweet-->
           <div>
             <label for="tweet-text">What are you humming about?</label>
             <textarea name="text" id="tweet-text"></textarea>
           </div>
           <div class="button-counter">
             <div>
-              <button type="submit">Tweet</button>
+              <button type="submit" id="submit-new-tweet">Tweet</button>
             </div>
             <div>
               <output name="counter" class="counter" for="tweet-text" id="count-char">140</output>
             </div>
           </div>
         </form>
+
+        <script>
+          console.log(`before doc`)
+          $(document).ready(function () {
+            console.log(`after doc`)
+            $("form").submit(function(event){
+              event.preventDefault();
+            })
+          })
+        </script>
+
+
         <br>
         <br>
          <!-- Tweet-Timeline (i.e. Tweet-Container)-->
