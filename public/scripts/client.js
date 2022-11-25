@@ -7,8 +7,7 @@ $(document).ready(function () {
     newTweet = $.get(
       "http://localhost:8080/tweets",
       function (response, textStatus) {
-        console.log(response); 
-        renderTweets(response); 
+        renderTweets(response);
       }
     );
   };
@@ -20,7 +19,6 @@ $(document).ready(function () {
   renderTweets = (arrayTweetObj) => {
     // loops through tweets
     for (const element of arrayTweetObj) {
-      console.log(element); 
       // calls createTweetElement for each tweet
       let $tweet = createTweetElement(element);
       // takes return value and appends it to the tweets container
@@ -69,5 +67,5 @@ $(document).ready(function () {
 `;
     return $tweet;
   };
-  loadTweets()
+  loadTweets();
 });
