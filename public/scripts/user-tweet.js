@@ -16,17 +16,11 @@ $(document).ready(function () {
       return div.innerHTML;
     };
     const safeHTML = `<p>${escape(tweet)}</p>`;
- 
+
     if (!tweet || tweet.length > 140) {
       $("#error-tweet").slideDown(100)
     } else {
       $("#error-tweet").slideUp(100)
-    }
-
-    // Conditional statement to check if tweet is empty or over 140 chars
-    if (!tweet || tweet.length > 140) {
-      // console.log(`Error: please submit characters between 1 and 140 characters`);
-    } else {
       $.post(
         "http://localhost:8080/",
         safeHTML,
