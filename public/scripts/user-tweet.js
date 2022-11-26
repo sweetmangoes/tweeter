@@ -18,7 +18,43 @@ $(document).ready(function () {
         console.log(textStatus);
       });
     }
+
+    // Markup of user post 
+    let userPost = `
+    <article class="tweet-container" id="tweet-container">
+      <header class="avatar-name-handle">
+        <div class="pic-name">
+          <img src="https://i.imgur.com/73hZDYK.png" alt="prof pic">
+            <p> Chris </p>
+          </div>
+          <div class="user-handle">
+             <p>@Generic</p>
+          </div>
+        </header> 
+        <article class="tweet">
+          <p>${tweet}</p>
+        </article>
+          <footer class="date-icons">
+          <div class="date">
+          <p>Today</p>
+          </div>
+          <div class="icon-flag-retweet-like">
+            <div class="icon-flag" id="icon-flag">
+              <i class="fa-solid fa-flag"></i>
+            </div>
+            <div class="icon-retweet" id="icon-retweet">
+              <i class="fa-solid fa-retweet"></i>
+            </div>
+            <div class="icon-like" id="icon-like">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </div>
+        </footer>
+      </article>
+    <br>
+    `;
+
+    $("#tweet-timeline").append(userPost);
+    
   });
-
-
 });

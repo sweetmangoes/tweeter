@@ -21,7 +21,7 @@ $(document).ready(function () {
     for (const element of arrayTweetObj) {
       // calls createTweetElement for each tweet
       let $tweet = createTweetElement(element);
-      // takes return value and appends it to the tweets container
+      // takes return value and appends it to the tweets timeline (i.e) container
       $("#tweet-timeline").append($tweet);
     }
   };
@@ -74,3 +74,4 @@ $(document).ready(function () {
   };
   loadTweets();
 });
+
