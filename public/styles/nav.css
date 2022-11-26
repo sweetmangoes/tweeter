@@ -33,3 +33,17 @@ div.tweeter {
 div.icon {
   color:red;
 }
+
+/* Tablet Style */
+@media only screen and (min-width: 768px) {
+  nav {
+    background-color: orange;
+  }
+}
+
+/* Desktop style */
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: green;
+  }
+}

@@ -1,7 +1,7 @@
 section.new-tweet {
   color: #545149;
-  padding: 20px;
   height: 100%;
+  width: 100%;
 }
 
 div.form {
@@ -18,7 +18,7 @@ textarea {
   border-bottom: .25rem solid grey;
   width: 100%;
   height: auto;
-  font-weight: bolder;
+  font-weight: lighter;
   outline: none;
   resize: none;
   overflow: hidden;

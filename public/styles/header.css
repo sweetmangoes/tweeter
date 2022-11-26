@@ -26,87 +26,26 @@ div.name h2 {
   margin-bottom: 0;
 }
 
-/* Tablet Style */
-@media only screen and (min-width: 768px) {
-  body {
-    display: flex;
-  }
-
-  nav {
-    background-color: orange;
-  }
+ /* Tablet Style */
+ @media only screen and (min-width: 768px) {
   header.top-of-page {
     float: left;
-    width: 250px;
+    width: 30%;
     margin-top: 150px;
     margin-left: 30px;
     background-color: orange;
     height: 0px;
   }
+ }
 
-  div.photo {
-    margin-top: 0px;
-  }
-
-  main.container {
-    float: right;
-    width: 55%;
-    margin-right: 40px;
-    margin-top: 120px;
-  }
-
-  div.name h2 {
-    color: white;
-    font-family: "Source Sans Pro", sans-serif;
-    margin-top: 8px;
-    margin-bottom: 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 10px;
-  }
-
-  div.error-tweet {
-    border: 5px solid red;
-    display: none;
-    color: red;
-    font-size: medium;
-  }
-}
-
-/* Desktop style */
-@media only screen and (min-width: 1024px) {
-  nav {
-    background-color: green;
-  }
+ /* Desktop style */
+ @media only screen and (min-width: 1024px) {
   header.top-of-page {
     float: left;
-    width: 400px;
+    width: 30%;
     margin-top: 150px;
     margin-left: 30px;
     background-color: green;
-    height: 100px;
     display: flex;
   }
-
-  div.photo {
-    margin-top: 0px;
-  }
-
-  main.container {
-    float: right;
-    width: 50%;
-    margin-right: 40px;
-    margin-top: 120px;
-  }
-
-  div.name h2 {
-    color: white;
-    font-family: "Source Sans Pro", sans-serif;
-    margin-top: 8px;
-    margin-bottom: 0;
-    display: flex;
-  }
-}
+ }
