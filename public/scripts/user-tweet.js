@@ -16,6 +16,8 @@ $(document).ready(function () {
       $.post("http://localhost:8080/", tweet, function (response, textStatus) {
         console.log(response);
         console.log(textStatus);
+        $(".tweetbox").val('')
+        $(".counter").val(140)
       });
     }
 
@@ -54,7 +56,7 @@ $(document).ready(function () {
     <br>
     `;
 
-    $("#tweet-timeline").append(userPost);
+    $("#tweet-timeline").prepend(userPost);
     
   });
 });
