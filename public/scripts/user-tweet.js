@@ -5,15 +5,24 @@ $(document).ready(function () {
   $("form").submit(function (event) {
     event.preventDefault();
     let $data = $(this).serializeArray();
+    console.log("data: ",$data);
 
     // tweet variable is storing the writing value
     const tweet = $data[0].value;
 
+    // to prevent xss by implementating escape
+    const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+    const safeHTML = `<p>${escape(tweet)}</p>`;
+    
     // Conditional statement to check if tweet is empty or over 140 chars
     if (!tweet || tweet.length > 140) {
       alert(`Error: please submit characters between 1 and 140 characters`);
     } else {
-      $.post("http://localhost:8080/", tweet, function (response, textStatus) {
+      $.post("http://localhost:8080/", safeHTML, function (response, textStatus) {
         $(".tweetbox").val('')
         $(".counter").val(140)
       });
@@ -32,7 +41,7 @@ $(document).ready(function () {
           </div>
         </header> 
         <article class="tweet">
-          <p>${tweet}</p>
+          <p>${safeHTML}</p>
         </article>
           <footer class="date-icons">
           <div class="date">
