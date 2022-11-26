@@ -14,8 +14,6 @@ $(document).ready(function () {
       alert(`Error: please submit characters between 1 and 140 characters`);
     } else {
       $.post("http://localhost:8080/", tweet, function (response, textStatus) {
-        console.log(response);
-        console.log(textStatus);
         $(".tweetbox").val('')
         $(".counter").val(140)
       });
