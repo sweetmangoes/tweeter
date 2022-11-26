@@ -1,6 +1,4 @@
 $(document).ready(function () {
-  console.log(`user-tweet.js is active`);
-
   // When user is submits a new tweet
   $("form").submit(function (event) {
     event.preventDefault();
@@ -17,10 +15,11 @@ $(document).ready(function () {
     };
     const safeHTML = `<p>${escape(tweet)}</p>`;
 
+    // Error handling and preventing empty || tweet > 140 chars
     if (!tweet || tweet.length > 140) {
-      $("#error-tweet").slideDown(100)
+      $("#error-tweet").slideDown(100);
     } else {
-      $("#error-tweet").slideUp(100)
+      $("#error-tweet").slideUp(100);
       $.post(
         "http://localhost:8080/",
         safeHTML,
@@ -32,7 +31,7 @@ $(document).ready(function () {
       );
     }
 
-    // Markup of user post
+    // Markup of userPost
     let userPost = `
     <article class="tweet-container" id="tweet-container">
       <header class="avatar-name-handle">
