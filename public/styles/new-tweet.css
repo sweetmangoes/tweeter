@@ -43,3 +43,16 @@ div button {
 div label {
   font-weight: bold;
 }
+
+div.error-tweet {
+  border: 5px solid red;
+  display: none;
+  color: red;
+}
+
+div.error-tweet p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}

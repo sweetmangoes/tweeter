@@ -5,30 +5,40 @@ $(document).ready(function () {
   $("form").submit(function (event) {
     event.preventDefault();
     let $data = $(this).serializeArray();
-    console.log("data: ",$data);
 
     // tweet variable is storing the writing value
     const tweet = $data[0].value;
 
-    // to prevent xss by implementating escape
+    // to prevent xss attacks
     const escape = function (str) {
       let div = document.createElement("div");
       div.appendChild(document.createTextNode(str));
       return div.innerHTML;
     };
     const safeHTML = `<p>${escape(tweet)}</p>`;
-    
-    // Conditional statement to check if tweet is empty or over 140 chars
+ 
     if (!tweet || tweet.length > 140) {
-      alert(`Error: please submit characters between 1 and 140 characters`);
+      $("#error-tweet").slideDown(100)
     } else {
-      $.post("http://localhost:8080/", safeHTML, function (response, textStatus) {
-        $(".tweetbox").val('')
-        $(".counter").val(140)
-      });
+      $("#error-tweet").slideUp(100)
     }
 
-    // Markup of user post 
+    // Conditional statement to check if tweet is empty or over 140 chars
+    if (!tweet || tweet.length > 140) {
+      // console.log(`Error: please submit characters between 1 and 140 characters`);
+    } else {
+      $.post(
+        "http://localhost:8080/",
+        safeHTML,
+        function (response, textStatus) {
+          $(".tweetbox").val("");
+          $(".counter").val(140);
+          $("#tweet-timeline").prepend(userPost);
+        }
+      );
+    }
+
+    // Markup of user post
     let userPost = `
     <article class="tweet-container" id="tweet-container">
       <header class="avatar-name-handle">
@@ -62,8 +72,5 @@ $(document).ready(function () {
       </article>
     <br>
     `;
-
-    $("#tweet-timeline").prepend(userPost);
-    
   });
 });

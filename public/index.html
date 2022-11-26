@@ -84,7 +84,11 @@
     <main class="container">
       <section class="new-tweet">
         <!-- New-Tweet-->
-        <form>       
+        <form>  
+          <div class="error-tweet" id="error-tweet">
+            <p>Please submit characters between 1 and 140 characters</p>
+          </div> 
+          <br>    
           <div>
             <label for="tweet-text">What are you humming about?</label>
             <textarea class="tweetbox" name="text" id="tweet-text"></textarea>
