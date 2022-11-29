@@ -1,7 +1,13 @@
+section.tweet-timeline{
+  width: 100%;
+}
+
 article.tweet-container {
   border: 3px solid #545149;
   padding: 20px;
   color: #545149;
+  width: 100%;
+
 }
 
 article.tweet-container:hover {
@@ -39,6 +45,7 @@ article.tweet {
   border-left: 0;
   border-right: 0; 
   border-bottom: .25rem solid grey;
+  overflow-x:auto;
 }
 
 article.tweet p {
@@ -85,3 +92,4 @@ div.icon-like:hover {
   color:gold;
 }
 
+::-webkit-scrollbar {     width: 0px;     background: transparent; /* make scrollbar transparent */ }

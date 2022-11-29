@@ -5,9 +5,9 @@ $(document).ready(function () {
     let countCharElement = $("#count-char");
     countCharElement.text(140 - charCount);
     if (charCount > 140) {
-      countCharElement.css("color", "red");
+      countCharElement.addClass("red-text")
     } else {
-      countCharElement.css("color", "");
+      countCharElement.removeClass("red-text")
     }
   });
 });

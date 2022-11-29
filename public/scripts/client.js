@@ -17,13 +17,22 @@ $(document).ready(function () {
   */
 
   renderTweets = (arrayTweetObj) => {
+    // clears out container when user submits new tweet!
+    $("#tweet-timeline").empty();
     // loops through tweets
     for (const element of arrayTweetObj) {
       // calls createTweetElement for each tweet
       let $tweet = createTweetElement(element);
       // takes return value and appends it to the tweets timeline (i.e) container
-      $("#tweet-timeline").append($tweet);
+      $("#tweet-timeline").prepend($tweet);
     }
+  };
+
+  // to prevent xss attacks
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   };
 
   /*
@@ -49,7 +58,7 @@ $(document).ready(function () {
           </div>
       </header> 
       <article class="tweet">
-        <p>${tweetObj.content.text}</p>
+        <p>${escape(tweetObj.content.text)}</p>
       </article>
       <footer class="date-icons">
         <div class="date">
@@ -72,5 +81,26 @@ $(document).ready(function () {
 `;
     return $tweet;
   };
+
+  // To load tweet containers
   loadTweets();
+
+  // When user is submits a new tweet
+  $("form").submit(function (event) {
+    event.preventDefault();
+    let $data = $(this).serialize();
+
+    // Error handling and preventing empty || tweet > 140 chars
+    if ($data === "text=" || $data.length > 145) {
+      console.log($data);
+      $("#error-tweet").slideDown(100);
+    } else {
+      $("#error-tweet").slideUp(100);
+      $.post("http://localhost:8080/tweets", $data, function (response) {
+        $(".tweetbox").val("");
+        $(".counter").val(140);
+        loadTweets();
+      });
+    }
+  });
 });
